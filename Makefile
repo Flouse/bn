@@ -33,4 +33,8 @@ alt_bn128_staticlib:
 	cd alt_bn128_staticlib && $(RISCV)/bin/riscv64-unknown-elf-gcc -o target/ut examples/ut.c target/riscv64imac-unknown-none-elf/release/libalt_bn128.a
 	cd alt_bn128_staticlib && $(RISCV_RUNNER) target/ut
 
+# MacOS
+alt_bn128_cdylib:
+	cd alt_bn128_cdylib && cargo build --release && clang -o target/ut examples/ut.c target/release/libalt_bn128.dylib
+
 .PHONY: alt_bn128 alt_bn128_rv alt_bn128_rv_bench_pairing alt_bn128_rv_bench_pairing_pprof alt_bn128_staticlib
