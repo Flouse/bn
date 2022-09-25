@@ -26,5 +26,7 @@ jobs:
         profile: minimal
         toolchain: nightly
     - name: Run benches
-      run: cargo +nightly bench --bench api
+      run: |
+        cargo +nightly bench --bench api
+        lscpu
    
