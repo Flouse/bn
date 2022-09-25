@@ -1,4 +1,6 @@
 #![feature(test)]
+// The internals of the test crate are unstable, behind the test flag.
+extern crate test;
 
 use substrate_bn::*;
 
