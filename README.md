@@ -14,13 +14,13 @@ Add the `bn` crate to your dependencies in `Cargo.toml`...
 
 ```toml
 [dependencies]
-bn = "0.4.2"
+substrate-bn = { git = "https://github.com/Flouse/bn.git", branch = "0.6.0" }
 ```
 
 ...and add an `extern crate` declaration to your crate root:
 
 ```rust
-extern crate bn;
+extern crate substrate-bn;
 ```
 
 ## API
